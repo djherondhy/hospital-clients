@@ -34,6 +34,6 @@ Abra [http://localhost:3000](http://localhost:3000) para visualizar no Browser.
 
 ### `yarn build`
 
-Compile o aplicativo para produção na pasta `build`. \
+Compile o app para produção na pasta `build`. \
 Ele agrupa corretamente o React no modo de produção e otimiza a construção para o melhor desempenho.
 
