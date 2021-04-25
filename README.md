@@ -17,6 +17,7 @@
 ## Install
 
 ### Obs: é necessário rodar a API Rest, para que o BackEnd da aplicação funcione.
+O Back-End roda na porta :3333
 ### `git clone https://github.com/djherondhy/hospital-api.git`
 
 Clone o repositório no seu diretório:
