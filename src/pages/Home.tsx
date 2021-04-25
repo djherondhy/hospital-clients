@@ -8,7 +8,7 @@ import { Button, Table } from 'react-bootstrap';
 
 import styles from './Home.module.scss';
 
-interface IClients{
+interface IPaciente{
   id: number;
   nome: string;
   telefone: string;
@@ -20,7 +20,7 @@ interface IClients{
 
 const Home: React.FC = () => {
 
-  const [clients, setClients] = useState<IClients[]>([])
+  const [clients, setClients] = useState<IPaciente[]>([])
   const [foto, setFoto] = useState<string>("");
 
   const history = useHistory();
@@ -32,23 +32,23 @@ const Home: React.FC = () => {
 
 
    async function loadClients() {
-    const res = await api.get('/clients');
+    const res = await api.get('/pacientes');
     console.log(res)
     setClients(res.data)
   }
 
   function newClient(){
-    history.push('/Clients');
+    history.push('/Paciente');
 
   }
 
   function editClient(id: number){
-    history.push(`/Clients/${id}`)
+    history.push(`/Paciente/${id}`)
 
   }
 
   async function deleteClient(id: number){
-    const res = await api.delete(`/clients/${id}`);
+    const res = await api.delete(`/pacientes/${id}`);
     loadClients()
   }
 
@@ -56,9 +56,9 @@ const Home: React.FC = () => {
     <div className="container">
 
       <div className={styles.header}>
-        <h1>Clientes</h1>
+        <h1>Pacientes</h1>
 
-        <Button variant="dark" onClick={newClient}>Novo CLiente</Button>
+        <Button variant="dark" onClick={newClient}>Novo Paciente</Button>
 
       </div>
     <Table striped bordered hover variant="dark">
@@ -83,6 +83,7 @@ const Home: React.FC = () => {
           <td>{client.email}</td>
          
           <td>
+         
             <Button variant="primary" onClick={()=> editClient(client.id)}>Editar</Button>{' '}
             <Button variant="danger" onClick={()=> deleteClient(client.id)}>Excluir</Button>
           </td>
