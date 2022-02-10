@@ -3,7 +3,7 @@
 ## :bookmark_tabs:Descrição:bookmark_tabs:
 > CRUD que consome API REST externa para controle de dados de pacientes de hospital.
 
-![Hospital Clients](https://user-images.githubusercontent.com/35778998/115984990-bae20d00-a577-11eb-9446-bc5fede8a28c.PNG)
+![115984990-bae20d00-a577-11eb-9446-bc5fede8a28c](https://user-images.githubusercontent.com/35778998/153481066-695b7843-fa09-4cd4-b25c-f42da8a71eb2.jpg)
 
 
 ## Technologies
